@@ -33,3 +33,5 @@ CREATE TABLE user_responses (
     sewage_system_failures ENUM('yes', 'no')
 );
 
+
+
