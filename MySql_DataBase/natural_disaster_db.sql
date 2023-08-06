@@ -1,7 +1,7 @@
 -- Create the MySQL Database and grant privileges to a new user
 CREATE DATABASE natural_disaster_db;
 -- CREATE USER 'web_user'@'%' IDENTIFIED BY 'your_password';
--- GRANT ALL PRIVILEGES ON disaster_webpage_db.* TO 'web_user'@'%';
+-- GRANT ALL PRIVILEGES ON natural_disaster_db.* TO 'web_user'@'%';
 -- FLUSH PRIVILEGES;
 
 -- Use the database
