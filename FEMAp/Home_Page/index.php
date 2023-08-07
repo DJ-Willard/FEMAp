@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <!--- <style> <?php include 'style.css'; ?> </style> /> -->
 
 <body>
@@ -189,11 +190,12 @@
 
   </section>
 
-
   </main>
 
   <footer>
+    
     <p>&copy; 2023 FEMAp, we are not affiliated with FEMA.</p>
+
   </footer>
 
 </body>
