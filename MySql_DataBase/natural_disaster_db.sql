@@ -1,14 +1,14 @@
 -- Create the MySQL Database and grant privileges to a new user
 CREATE DATABASE natural_disaster_db;
 -- CREATE USER 'web_user'@'%' IDENTIFIED BY 'your_password';
--- GRANT ALL PRIVILEGES ON disaster_webpage_db.* TO 'web_user'@'%';
+-- GRANT ALL PRIVILEGES ON natural_disaster_db.* TO 'web_user'@'%';
 -- FLUSH PRIVILEGES;
 
 -- Use the database
-USE natural_disaster_db;
+-- USE natural_disaster_db;
 
 -- Create the table to store user responses
-CREATE TABLE user_responses (
+ CREATE TABLE user_responses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     adults INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE user_responses (
     power_outages ENUM('yes', 'no'),
     water_supply_disruptions ENUM('yes', 'no'),
     gas_leaks_explosions ENUM('yes', 'no'),
-    sewage_system_failures ENUM('yes', 'no')
+    sewage_system_failures ENUM('yes', 'no'));
 
 
 -- Create tables for each gear list tied to each ND in order of list
@@ -72,7 +72,7 @@ VALUES
     ('Puncture Resisant Jacket');
 
 -- Create tables for each gear list tied to each ND
-CREATE TABLE Earthquakes_gear (
+CREATE TABLE earthquakes_gear (
     gear_id INT AUTO_INCREMENT PRIMARY KEY,
     gear_item VARCHAR(255) NOT NULL
 );
@@ -98,18 +98,6 @@ VALUES
     ('Fireproof Blanket'), 
     ('Safety Googles');
 
--- Create tables for each gear list tied to each ND
-CREATE TABLE wildfires_gear (
-    gear_id INT AUTO_INCREMENT PRIMARY KEY,
-    gear_item VARCHAR(255) NOT NULL
-);
--- Then Insert data into each table
-INSERT INTO wildfires_gear  (gear_item)
-VALUES 
-	('Long Sleeve Fire Resistant'),
-    ('N95 masks'),
-    ('Fireproof Blanket'),
-    ('Safety Googles');
 
 -- Create tables for each gear list tied to each ND
 CREATE TABLE floods_gear (
