@@ -15,7 +15,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="About_page/index.html">About</a></li>
+        <li><a href="About_page/index.php">About</a></li>
         <li><a href="https://www.fema.gov/about/contact">Contact</a></li>
       </ul>
     </nav>
