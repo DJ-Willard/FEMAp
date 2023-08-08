@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FEMAp</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-
-<style> <?php include 'style.css'; ?> </style>
 
 <body>
 
@@ -39,7 +38,7 @@
       
       <article class="post">
         <a href="https://hazards.fema.gov/nri/expected-annual-loss">
-          <img src="images/map-expectedannualloss.png" width = "800" height = "550" alt="US Expected Loss Map">
+          <img src="map-expectedannualloss.png" width = "800" height = "550" alt="US Expected Loss Map">
         </a>
         <h3>
           <a href="#">Post Title 1</a>

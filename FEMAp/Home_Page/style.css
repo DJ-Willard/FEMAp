@@ -1,13 +1,12 @@
 /* Colors */
 :root {
-    --primary-color: #bebfc4b9;
+    --primary-color: #333751B9;
     --secondary-color: #F44336;
   }
   
   /* Typography */
   body {
     font-family: 'Open Sans', sans-serif;
-    background-color: rgb(81, 80, 80);
     font-size: 18px;
     line-height: 1.6;  
   }
@@ -17,18 +16,18 @@
   }
   
   h1 {
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 700;
-    color: rgb(164, 161, 161);
+    color: var(green);
   }
   
   /* Header */
   header {
-    background-color:grey;
+    background-color: var(--primary-color);
   }
   
   header a {
-    color: black;
+    color: green;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -36,8 +35,7 @@
   
   /* Hero Section */  
   .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fE5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60'); 
-    background-size: 1300px auto;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero.jpg'); 
   }
   
   .hero .content {
@@ -65,7 +63,7 @@
   .posts .meta {
     display: flex;
     font-size: 14px;
-    color: #323131;
+    color: #999;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -76,7 +74,7 @@
   
   /* Footer */
   footer {
-    background-color: rgb(2, 76, 2);
+    background-color: green;
     color: white;
     padding: 50px 0;
   }
