@@ -22,8 +22,10 @@
                             <p>for USERNAMEHERE</p> <!--fixme-->
                         </div>
                         <div class="date"> <!--total_wrap-->
-                            <span class="bold date">Date</span>
-                            <span>00/00/0000</span>
+                            <div class="bold date">Date</div>
+                            <!--<span><input type="date"></span>-->
+                            <span id="datetime"></span></p><script>var dt = new Date();
+                                document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
                         </div>
                     </div>
                 </div>
