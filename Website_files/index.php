@@ -60,6 +60,7 @@
     <section class="SecondTitle">
       <h2> <span style="padding-left: 0px;">Hazard Checklist:</span></h2>
       <h2> <span style="padding-left: 75px;">Use the maps and questions below to cater your preventative needs.</span></h2>
+      <h2> <span style="padding-left: 75px;">Click the checkbox on the left of the questions to indicate "yes".</span></h2>
       <h2> <span style="padding-left: 75px;">For more information on the natural risk, click the map or select contact at the top of the page. </span></h2>
       <h2> <span style="padding-left: 75px;">After completing the checklist click submit to generate your personalized natural hazard </span></h2>
       <h2> <span style="padding-left: 75px;">hazard prevention list. </span></h2>
@@ -342,6 +343,26 @@
       <label for="avalanches">Do you live on/around a mountainous region that experiences regular/annual snowfall? (greater than 12 inches)</label>
     </p>
   </article>
+
+
+  <br> <br>
+  <article>
+    <p>
+      <input type="hidden" name="fog" value="no">  
+      <input type="checkbox" id="fog" name="fog" value="yes">
+      <label for="fog">Do you live near any natural waterways, such as river valleys or creeks?</label>
+    </p>
+  </article>
+
+  <br> <br>
+  <article>
+    <p>
+      <input type="hidden" name="duststorm" value="no">  
+      <input type="checkbox" id="duststorm" name="duststorm" value="yes">
+      <label for="duststorm">Do you live near a desert that experiences high winds (ex. Southwestern US)?</label>
+    </p>
+  </article>
+
 
   <!-- CITY BASED QUESTIONS -->
   <br> <br>
