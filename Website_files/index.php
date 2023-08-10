@@ -228,8 +228,8 @@
       <img src="images/map-lightning_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="thunderstorms" value="no">  
-      <input type="checkbox" id="thunderstorms" name="thunderstorms" value="yes">
+      <input type="hidden" name="thunderstorms" value="no"  onchange="copyThunder(this);>  
+      <input type="checkbox" id="thunderstorms" name="thunderstorms" value="yes"  onchange="copyThunder(this);>
       <label for="thunderstorms">Does your region experience thunderstorms?</label>
     </p>
   </article>
@@ -265,7 +265,7 @@
     </a>
     <p>
       <input type="hidden" name="floods" value="no">  
-      <input type="checkbox" id="" name="floods" value="yes">
+      <input type="checkbox" id="floods" name="floods" value="yes">
       <label for="floods">Do you live along the coast and/or near a river?</label>
     </p> 
   </article>
@@ -348,18 +348,18 @@
   <br> <br>
   <article>
     <p>
-      <input type="hidden" name="fog" value="no">  
-      <input type="checkbox" id="fog" name="fog" value="yes">
-      <label for="fog">Do you live near any natural waterways, such as river valleys or creeks?</label>
+      <input type="hidden" name="fog_visibility" value="no">  
+      <input type="checkbox" id="fog_visibility" name="fog_visibility" value="yes">
+      <label for="fog_visibility">Do you live near any natural waterways, such as river valleys or creeks?</label>
     </p>
   </article>
 
   <br> <br>
   <article>
     <p>
-      <input type="hidden" name="duststorm" value="no">  
-      <input type="checkbox" id="duststorm" name="duststorm" value="yes">
-      <label for="duststorm">Do you live near a desert that experiences high winds (ex. Southwestern US)?</label>
+      <input type="hidden" name="dust_storms" value="no">  
+      <input type="checkbox" id="dust_storms" name="dust_storms" value="yes">
+      <label for="dust_storms">Do you live near a desert that experiences high winds (ex. Southwestern US)?</label>
     </p>
   </article>
 
@@ -392,8 +392,8 @@
   
     <article>
       <p>
-      <input type="hidden" name="chemical_spills" value="no">
-      <input type="checkbox" id="chemical_spills" name="chemical_spills" value="yes">
+      <input type="hidden" name="chemical_spills" value="no" onchange="copyChemical(this);">
+      <input type="checkbox" id="chemical_spills" name="chemical_spills" value="yes" onchange="copyChemical(this);">
       <label for="chemical_spills">Do you live in or near any cities, factories, or industrial plants?</label>
     </p>
     </article>
@@ -407,6 +407,14 @@
     </article>
 
     <article>
+      <p>
+      <input type="hidden" name="sewage_system_failures" value="no">
+      <input type="checkbox" id="sewage_system_failures" name="sewage_system_failures" value="yes">
+      <label for="sewage_system_failures">Do you use a city/town sewage system, (if unsure, select yes)?</label>
+    </p>
+    </article>
+
+    <article>
       <input type="hidden" name="microbursts" value="no">
     </article>
 
@@ -414,28 +422,26 @@
       <input type="hidden" name="industrial_accidents" value="no">
     </article>
 
-    <article>
-      <input type="hidden" name="sewage_system_failures" value="no">
-    </article>
 
       <button class="Submit" type="Submit">Submit</button>
 
       <script>
-        function submitData() {
-          var res = {};
-          
-          res["microbursts"] = $("input[name=lightning]").val(); // fix this one
-          res["industrial_accidents"] = $("input[name=sewage]").val(); // fix this one 
-          res["sewage_system_failures"] = $("input[name=sewage]").val(); // fix this one
 
-          res["dust_storms"] = $("input[name=strongwind]").val(); // needs entry
-          res["fog_visibility"] = "Yes"; // needs entry
-          
 
-          console.log("PHP FUnction attempted call..");
-          //exec ('submit.php res') ~ not java
-          //incluce('submit.php) ~ not java
-        }
+      function copyChemical(bf) {
+      var text1 = bf.checked ? document.getElementById("chemical_spills").value : '';
+      document.getElementById("industrial_accidents").value = text1;
+      }
+    
+
+
+
+      function copyThunder(bf) {
+      var text1 = bf.checked ? document.getElementById("thunderstorms").value : '';
+      document.getElementById("microbursts").value = text1;
+      }
+      
+          
         </script>
     </form>
   </section>
@@ -448,7 +454,5 @@
   </footer>
 
 </body>
-
-</html>
 
 </html>
