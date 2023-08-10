@@ -1,10 +1,67 @@
 // Connect to database 
-$db = new mysqli('localhost', 'web_user', 'your_password', 'natural_disaster_db');
+$db = new mysqli('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db');
 
 // Insert form data into database
-$stmt = $db->prepare("INSERT INTO user_responses (name, adults, children, infants, ...) 
-                      VALUES (?, ?, ?, ?, ...)");
-$stmt->bind_param('siiii', $_POST['name'], $_POST['adults'], ...); 
+$stmt = $db->prepare("INSERT INTO user_responses (name, 
+                                                  adults, 
+                                                  children, 
+                                                  infants, 
+                                                  hurricanes_tropical_storms,
+                                                  tornadoes, 
+                                                  earthquakes,
+                                                  wildfires,
+                                                  floods,
+                                                  landslides,
+                                                  tsunamis,
+                                                  volcanic_eruptions,
+                                                  droughts,
+                                                  heatwaves,
+                                                  blizzards,
+                                                  avalanches,
+                                                  thunderstorms,
+                                                  hailstorms,
+                                                  high_winds,
+                                                  microbursts,
+                                                  dust_storms,
+                                                  fog_visibility,
+                                                  industrial_accidents,
+                                                  chemical_spills,
+                                                  nuclear_accidents,
+                                                  power_outages,
+                                                  water_supply_disruptions,
+                                                  gas_leaks_explosions,
+                                                  sewage_system_failures)
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param('siiii', 
+                  $_POST['name'], 
+                  $_POST['adults'], 
+                  $_POST['children'],
+                  $_POST['infants'],
+                  $_POST['hurricanes_tropical_storms'],
+                  $_POST['tornadoes'],
+                  $_POST['earthquakes'],
+                  $_POST['wildfires'],
+                  $_POST['floods'],
+                  $_POST['landslides'],
+                  $_POST['tsunamis'],
+                  $_POST['volcanic_eruptions'],
+                  $_POST['droughts'],
+                  $_POST['heatwaves'],
+                  $_POST['blizzards'],
+                  $_POST['avalanches'],
+                  $_POST['thunderstorms'],
+                  $_POST['hailstorms'],
+                  $_POST['high_winds'],
+                  $_POST['microbursts'],
+                  $_POST['dust_storms'],
+                  $_POST['fog_visibility'],
+                  $_POST['industrial_accidents'],
+                  $_POST['chemical_spills'],
+                  $_POST['nuclear_accidents'],
+                  $_POST['power_outages'],
+                  $_POST['water_supply_disruptions'],
+                  $_POST['gas_leaks_explosions'],
+                  $_POST['sewage_system_failures']); 
 $stmt->execute();
 
 // Query to get user's responses
