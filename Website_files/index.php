@@ -228,8 +228,8 @@
       <img src="images/map-lightning_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="thunderstorms" value="no"  onchange="copyThunder(this);>  
-      <input type="checkbox" id="thunderstorms" name="thunderstorms" value="yes"  onchange="copyThunder(this);>
+      <input type="hidden" id="thunderstorms" name="thunderstorms" value="no" onchange="copyThunder(this)";>  
+      <input type="checkbox" id="thunderstorms" name="thunderstorms" value="yes" onchange="copyThunder(this)";>
       <label for="thunderstorms">Does your region experience thunderstorms?</label>
     </p>
   </article>
@@ -390,7 +390,7 @@
   
     <article>
       <p>
-      <input type="hidden" name="chemical_spills" value="no" onchange="copyChemical(this);">
+      <input type="hidden" id="chemical_spills" name="chemical_spills" value="no" onchange="copyChemical(this);">
       <input type="checkbox" id="chemical_spills" name="chemical_spills" value="yes" onchange="copyChemical(this);">
       <label for="chemical_spills">Do you live in or near any cities, factories, or industrial plants?</label>
     </p>
@@ -434,8 +434,8 @@
     }
 
     function copyThunder(bf) {
-    var text1 = bf.checked ? document.getElementById("thunderstorms").value : '';
-    document.getElementById("microbursts").value = text1;
+    var text2 = bf.checked ? document.getElementById("thunderstorms").value : '';
+    document.getElementById("microbursts").value = text2;
     }
     
         
