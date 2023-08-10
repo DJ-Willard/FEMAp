@@ -1,4 +1,6 @@
 // Connect to database 
+
+<?php
 $db = new mysqli('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db');
 
 // Insert form data into database
@@ -228,3 +230,4 @@ $_SESSION['user_name'] = $user_name;
 
 // Redirect back to index.php
 header('Location: index.php');
+?>
