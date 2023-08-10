@@ -218,9 +218,13 @@ $infantKits = $user['infants'];
 // Append to gear list string
 $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
 
+//creating passing varible user_name
+$user_name = ['name'];
+
 // Set gear list in $_SESSION
 session_start();
 $_SESSION['gearList'] = $gearList;
+$_SESSION['user_name'] = user_name;
 
 // Redirect back to index.php
 header('Location: index.php');
