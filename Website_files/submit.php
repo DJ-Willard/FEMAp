@@ -1,5 +1,9 @@
-// Connect to database 
+// Connect to database or die
 $db = new mysqli('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db');
+if ($db->connect_error) 
+{
+    die("Connection failed: " . $db->connect_error);
+}
 
 // Insert form data into database
 $stmt = $db->prepare("INSERT INTO user_responses (name, 
@@ -32,7 +36,7 @@ $stmt = $db->prepare("INSERT INTO user_responses (name,
                                                   gas_leaks_explosions,
                                                   sewage_system_failures)
                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param('siiii', 
+$stmt->bind_param('siiiii', 
                   $_POST['name'], 
                   $_POST['adults'], 
                   $_POST['children'],
@@ -226,5 +230,6 @@ session_start();
 $_SESSION['gearList'] = $gearList;
 $_SESSION['user_name'] = $user_name;
 
-// Redirect back to index.php
-header('Location: index.php');
+// Redirect back to Website_files/Generative_PDF_page index.php
+header('Location: Generative_PDF_page/index.php');
+session_start();
