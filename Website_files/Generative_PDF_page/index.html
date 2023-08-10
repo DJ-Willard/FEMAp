@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checklist</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="checklist_wrapper"> <!--invoice_wrapper-->
+                <div class="header">
+                    <div class="logo_wrap"> <!--logo_invoice_wrap-->
+                        <div class="logo_sec">
+                            <img src="FEMAp.png"
+                            width="130"
+                            height="80">     
+                        </div>    
+                    </div>
+                    <div class="title_wrap"> <!--bill_total_wrap-->
+                        <div class="name_sec"> <!--bill_sec-->
+                            <p class="bold name">FEMA Checklist</p>
+                            <p>for USERNAMEHERE</p> <!--fixme-->
+                        </div>
+                        <div class="date"> <!--total_wrap-->
+                            <div class="bold date">Date</div>
+                            <!--<span><input type="date"></span>-->
+                            <span id="datetime"></span></p><script>var dt = new Date();
+                                document.getElementById("datetime").innerHTML=dt.toLocaleString();</script>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <div class="main_table">
+                        <div class="table_header">
+                            <div class="row">
+                                <div class="col col_no">NO.</div>
+                                <div class="col col_des">ITEM DESCRIPTION</div>
+                            </div>
+                        </div>
+                        <div class="table_body">
+                            <!--test row-->
+                            <div class="row">
+                                <div class="col col_no"><p>00</p></div> <!--fixme-->
+                                <div class="col col_des">
+                                    <p class="bold">INPUTHERE</p> <!--fixme-->    
+                                </div>
+                                <div class="col col_check">
+                                    <input type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
