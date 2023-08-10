@@ -1,4 +1,5 @@
 // Connect to database or die
+<?php
 $db = new mysqli('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db');
 if ($db->connect_error) 
 {
@@ -233,3 +234,5 @@ $_SESSION['user_name'] = $user_name;
 // Redirect back to Website_files/Generative_PDF_page index.php
 header('Location: Generative_PDF_page/index.php');
 session_start();
+?>
+
