@@ -354,7 +354,6 @@
     </p>
   </article>
 
-  <br> <br>
   <article>
     <p>
       <input type="hidden" name="dust_storms" value="no">  
@@ -365,7 +364,6 @@
 
 
   <!-- CITY BASED QUESTIONS -->
-  <br> <br>
   <article>
     <p>
       <input type="hidden" name="power_outages" value="no">
