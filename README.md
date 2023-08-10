@@ -1,4 +1,5 @@
 # Project FEMAp
+![FEMAp](https://github.com/DJ-Willard/FEMAp/assets/114689080/ea8db9f1-2a46-442a-b108-b34d19a884f2)
 ## Team Members
 * Daniel Willard
 * Evan Doster

@@ -489,21 +489,3 @@ VALUES
     ('Toothpaste'),
     ('Emergency Car kit');
     
--- Create a temporary table to store the calculated conditional list
-CREATE TEMPORARY TABLE conditional_list AS
-SELECT 
-    user_id,
-    user_name,
-    number_of_adults,
-    number_of_children,
-    number_of_infants,
-    (number_of_adults + number_of_children + number_of_infants) * 3 AS gallons_of_water,
-    (number_of_adults + number_of_children) * 3000 AS calories_of_nonperishable_food,
-    number_of_infants * 1500 AS calories_of_infant_safe_food,
-    number_of_adults AS number_of_adult_first_aid_kits,
-    number_of_children AS number_of_children_first_aid_kits,
-    number_of_infants AS number_of_infant_first_aid_kits
-FROM user_responses;
-
--- Display the conditional list
-SELECT * FROM conditional_list;
