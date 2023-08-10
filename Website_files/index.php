@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FEMAp</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -153,9 +154,9 @@
       <img src="images/map-drought_risk.png" width = "600" height = "350">
     </a>
     <p>
-      <input type="hidden" name="drought" value="no">  
-      <input type="checkbox" id="drought" name="drought" value="yes">
-      <label for="drought">Do you live in a relatively dry area with little rainfall for months at a time?</label>
+      <input type="hidden" name="droughts" value="no">  
+      <input type="checkbox" id="droughts" name="droughts" value="yes">
+      <label for="droughts">Do you live in a relatively dry area with little rainfall for months at a time?</label>
     </p>
     
   </article>
@@ -166,9 +167,9 @@
       <img src="images/map-heatwave_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="heatwave" value="no">  
-      <input type="checkbox" id="heatwave" name="heatwave" value="yes">
-      <label for="heatwave">Do you live in a dry/arid region, or at a relatively high-pressure altitude?</label>
+      <input type="hidden" name="heatwaves" value="no">  
+      <input type="checkbox" id="heatwaves" name="heatwaves" value="yes">
+      <label for="heatwaves">Do you live in a dry/arid region, or at a relatively high-pressure altitude?</label>
     </p>
   </article>
 
@@ -178,9 +179,9 @@
       <img src="images/map-wildfire_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="wildfire" value="no">  
-      <input type="checkbox" id="wildfire" name="wildfire" value="yes">
-      <label for="wildfire">Do you live near any forests, grasslands, or shrublands?</label>
+      <input type="hidden" name="wildfires" value="no">  
+      <input type="checkbox" id="wildfires" name="wildfires" value="yes">
+      <label for="wildfires">Do you live near any forests, grasslands, or shrublands?</label>
     </p>
   </article>
 
@@ -190,9 +191,9 @@
       <img src="images/map-earthquake_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="earthquake" value="no">  
-      <input type="checkbox" id="earthquake" name="earthquake" value="yes">
-      <label for="earthquake">Do you live near any fault lines?</label>
+      <input type="hidden" name="earthquakes" value="no">  
+      <input type="checkbox" id="earthquakes" name="earthquakes" value="yes">
+      <label for="earthquakes">Do you live near any fault lines?</label>
     </p>
   </article>
 
@@ -202,9 +203,9 @@
       <img src="images/map-landslide_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="landslide" value="no">  
-      <input type="checkbox" id="landslide" name="landslide" value="yes">
-      <label for="landslide">Do you live on or beside any mountains or cliffsides?
+      <input type="hidden" name="landslides" value="no">  
+      <input type="checkbox" id="landslides" name="landslides" value="yes">
+      <label for="landslides">Do you live on or beside any mountains or cliffsides?
       </label>
     </p>
   </article>
@@ -215,9 +216,9 @@
       <img src="images/map-strongwind_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="strongwind" value="no">  
-      <input type="checkbox" id="strongwind" name="strongwind" value="yes">
-      <label for="strongwind">Does your region experience high winds?</label>
+      <input type="hidden" name="high_winds" value="no">  
+      <input type="checkbox" id="high_winds" name="high_winds" value="yes">
+      <label for="high_winds">Does your region experience high winds?</label>
     </p>
   </article>
 
@@ -227,9 +228,9 @@
       <img src="images/map-lightning_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="lightning" value="no">  
-      <input type="checkbox" id="lightning" name="lightning" value="yes">
-      <label for="lightning">Does your region experience thunderstorms?</label>
+      <input type="hidden" name="thunderstorms" value="no">  
+      <input type="checkbox" id="thunderstorms" name="thunderstorms" value="yes">
+      <label for="thunderstorms">Does your region experience thunderstorms?</label>
     </p>
   </article>
 
@@ -239,9 +240,9 @@
       <img src="images/map-tornado_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="tornado" value="no">  
-      <input type="checkbox" id="tornado" name="tornado" value="yes">
-      <label for="tornado">Do you live in or around flatlands/plains?</label>
+      <input type="hidden" name="tornadoes" value="no">  
+      <input type="checkbox" id="tornadoes" name="tornadoes" value="yes">
+      <label for="tornadoes">Do you live in or around flatlands/plains?</label>
     </p>
   </article>
 
@@ -251,9 +252,9 @@
       <img src="images/map-hurricane_risk.png" width = "600" height = "350"> 
     </a>
     <p>
-      <input type="hidden" name="hurricane" value="no">  
-      <input type="checkbox" id="hurricane" name="hurricane" value="yes">
-      <label for="hurricane">Do you live along the East or SE coasts, or on an island?</label>
+      <input type="hidden" name="hurricanes_tropical_storms" value="no">  
+      <input type="checkbox" id="hurricanes_tropical_storms" name="hurricanes_tropical_storms" value="yes">
+      <label for="hurricanes_tropical_storms">Do you live along the East or SE coasts, or on an island?</label>
     </p>
   </article>
 
@@ -263,9 +264,9 @@
       <img src="images/map-coastalflooding_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="coastalflooding" value="no">  
-      <input type="checkbox" id="" name="coastalflooding" value="yes">
-      <label for="coastalflooding">Do you live along the coast and/or near a river?</label>
+      <input type="hidden" name="floods" value="no">  
+      <input type="checkbox" id="" name="floods" value="yes">
+      <label for="floods">Do you live along the coast and/or near a river?</label>
     </p> 
   </article>
 
@@ -275,9 +276,9 @@
       <img src="images/map-tsunami_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="tsunami" value="no">  
-      <input type="checkbox" id="tsunami" name="tsunami" value="yes">
-      <label for="tsunami">Do you live along the West coast?</label>
+      <input type="hidden" name="tsunamis" value="no">  
+      <input type="checkbox" id="tsunamis" name="tsunamis" value="yes">
+      <label for="tsunamis">Do you live along the West coast?</label>
     </p>
   </article>
 
@@ -287,9 +288,9 @@
       <img src="images/map-volcanicactivity_risk.png" width = "600" height = "350"> 
     </a>
     <p>
-      <input type="hidden" name="volcanicactivity" value="no">  
-      <input type="checkbox" id="volcanicactivity" name="volcanicactivity" value="yes">
-      <label for="volcanicactivity">Do you live near any active/inactive volcanoes, or are you on an island?</label>
+      <input type="hidden" name="volcanic_eruptions" value="no">  
+      <input type="checkbox" id="volcanic_eruptions" name="volcanic_eruptions" value="yes">
+      <label for="volcanic_eruptions">Do you live near any active/inactive volcanoes, or are you on an island?</label>
     </p>
   </article>
 
@@ -299,9 +300,9 @@
       <img src="images/map-hail_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="hail" value="no">  
-      <input type="checkbox" id="hail" name="hail" value="yes">
-      <label for="hail">Do you live in a flat area region with moderate or high elevation (ex. Great Plains)?</label>
+      <input type="hidden" name="hailstorms" value="no">  
+      <input type="checkbox" id="hailstorms" name="hailstorms" value="yes">
+      <label for="hailstorms">Do you live in a flat area region with moderate or high elevation (ex. Great Plains)?</label>
     </p>
 
   </article>
@@ -312,9 +313,9 @@
       <img src="images/map-icestorm_risk.png" width = "600" height = "350">
     </a>
     <p>
-      <input type="hidden" name="icestorm" value="no">  
-      <input type="checkbox" id="icestorm" name="icestorm" value="yes">
-      <label for="icestorm">Do live in an area that experiences regular/annual snowfall (greater than 12 inches)?</label>
+      <input type="hidden" name="ice_storms" value="no">  
+      <input type="checkbox" id="ice_storms" name="ice_storms" value="yes">
+      <label for="ice_storms">Do live in an area that experiences regular/annual snowfall (greater than 12 inches)?</label>
     </p>
 
   </article>
@@ -325,9 +326,9 @@
       <img src="images/map-winterweather_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="winterweather" value="no">  
-      <input type="checkbox" id="winterweather" name="winterweather" value="yes">
-      <label for="winterweather">Do you live inland (non-coastal) and experience regular/annual snowfall? (greater than 12 inches)?</label>
+      <input type="hidden" name="blizzards" value="no">  
+      <input type="checkbox" id="blizzards" name="blizzards" value="yes">
+      <label for="blizzards">Do you live inland (non-coastal) and experience regular/annual snowfall? (greater than 12 inches)?</label>
     </p>
   </article>
 
@@ -337,9 +338,9 @@
       <img src="images/map-avalanche_risk.png" width = "600" height = "350" >
     </a>
     <p>
-      <input type="hidden" name="avalanche" value="no">  
-      <input type="checkbox" id="avalanche" name="avalanche" value="yes">
-      <label for="avalanche">Do you live on/around a mountainous region that experiences regular/annual snowfall? (greater than 12 inches)</label>
+      <input type="hidden" name="avalanches" value="no">  
+      <input type="checkbox" id="avalanches" name="avalanches" value="yes">
+      <label for="avalanches">Do you live on/around a mountainous region that experiences regular/annual snowfall? (greater than 12 inches)</label>
     </p>
   </article>
 
@@ -367,72 +368,76 @@
   <br> <br>
   <article>
     <p>
-      <input type="hidden" name="power" value="no">
-      <input type="checkbox" id="power" name="power" value="yes">
-      <label for="power">Do you own and maintain your own source of electrical power?</label>
+      <input type="hidden" name="power_outages" value="no">
+      <input type="checkbox" id="power_outages" name="power_outages" value="yes">
+      <label for="power_outages">Do you own and maintain your own source of electrical power?</label>
     </p>
     </article>
   
     <article>
       <p>
-      <input type="hidden" name="water" value="no">
-      <input type="checkbox" id="water" name="water" value="yes">
-      <label for="water">Do you own and maintain your own source of water?</label>
+      <input type="hidden" name="water_supply_disruptions" value="no">
+      <input type="checkbox" id="water_supply_disruptions" name="water_supply_disruptions" value="yes">
+      <label for="water_supply_disruptions">Do you own and maintain your own source of water?</label>
     </p>
     </article>
   
     <article>
       <p>
-      <input type="hidden" name="gas" value="no">
-      <input type="checkbox" id="gas" name="gas" value="yes">
-      <label for="gas">Do you own any gas appliances, to include heating?</label>
+      <input type="hidden" name="gas_leaks_explosions" value="no">
+      <input type="checkbox" id="gas_leaks_explosions" name="gas_leaks_explosions" value="yes">
+      <label for="gas_leaks_explosions">Do you own any gas appliances, to include heating?</label>
     </p>
     </article>
   
     <article>
       <p>
-      <input type="hidden" name="sewage" value="no">
-      <input type="checkbox" id="sewage" name="sewage" value="yes">
-      <label for="sewage">Do you live in or near any cities, factories, or industrial plants?</label>
+      <input type="hidden" name="chemical_spills" value="no">
+      <input type="checkbox" id="chemical_spills" name="chemical_spills" value="yes">
+      <label for="chemical_spills">Do you live in or near any cities, factories, or industrial plants?</label>
     </p>
     </article>
 
     <article>
       <p>
-      <input type="hidden" name="chemical" value="no">
-      <input type="checkbox" id="chemical" name="chemical" value="yes">
-      <label for="chemical">Do you live near any nuclear facilities, major cities, or military installations?</label>
+      <input type="hidden" name="nuclear_accidents" value="no">
+      <input type="checkbox" id="nuclear_accidents" name="nuclear_accidents" value="yes">
+      <label for="nuclear_accidents">Do you live near any nuclear facilities, major cities, or military installations?</label>
     </p>
+    </article>
+
+    <article>
+      <input type="hidden" name="microbursts" value="no">
+    </article>
+
+    <article>
+      <input type="hidden" name="industrial_accidents" value="no">
+    </article>
+
+    <article>
+      <input type="hidden" name="sewage_system_failures" value="no">
     </article>
 
       <button class="Submit" type="Submit">Submit</button>
 
-    </form>
-
-    <?php 
-
-        //data passback
-        // Start session
-        session_start();
-
-        // Check if gear list exists
-        if(isset($_SESSION['gearList'])) {
-
-          // Display gear list
-          echo "<p>Recommended Gear:</p>";
-          echo "<p>" . $_SESSION['gearList'] . "</p>";
+      <script>
+        function submitData() {
+          var res = {};
           
-          // Unset session variable
-          unset($_SESSION['gearList']);
+          res["microbursts"] = $("input[name=lightning]").val(); // fix this one
+          res["industrial_accidents"] = $("input[name=sewage]").val(); // fix this one 
+          res["sewage_system_failures"] = $("input[name=sewage]").val(); // fix this one
 
-        } else {
+          res["dust_storms"] = $("input[name=strongwind]").val(); // needs entry
+          res["fog_visibility"] = "Yes"; // needs entry
+          
 
-          // Show default text
-          echo "<p>Complete the form to see recommended gear</p>";
-
+          console.log("PHP FUnction attempted call..");
+          //exec ('submit.php res') ~ not java
+          //incluce('submit.php) ~ not java
         }
-    ?>
-
+        </script>
+    </form>
   </section>
 
 
@@ -443,5 +448,7 @@
   </footer>
 
 </body>
+
+</html>
 
 </html>
