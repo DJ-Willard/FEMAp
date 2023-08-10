@@ -345,7 +345,7 @@
   </article>
 
 
-  <br> <br>
+  <br>
   <article>
     <p>
       <input type="hidden" name="fog_visibility" value="no">  
@@ -412,6 +412,8 @@
     </p>
     </article>
 
+    <br> <br>
+
     <article>
       <input type="hidden" name="microbursts" value="no">
     </article>
@@ -421,26 +423,24 @@
     </article>
 
 
-      <button class="Submit" type="Submit">Submit</button>
+    <button class="Submit" type="Submit">Submit</button>
 
-      <script>
+    <script>
 
 
-      function copyChemical(bf) {
-      var text1 = bf.checked ? document.getElementById("chemical_spills").value : '';
-      document.getElementById("industrial_accidents").value = text1;
-      }
+    function copyChemical(bf) {
+    var text1 = bf.checked ? document.getElementById("chemical_spills").value : '';
+    document.getElementById("industrial_accidents").value = text1;
+    }
+
+    function copyThunder(bf) {
+    var text1 = bf.checked ? document.getElementById("thunderstorms").value : '';
+    document.getElementById("microbursts").value = text1;
+    }
     
+        
+    </script>
 
-
-
-      function copyThunder(bf) {
-      var text1 = bf.checked ? document.getElementById("thunderstorms").value : '';
-      document.getElementById("microbursts").value = text1;
-      }
-      
-          
-        </script>
     </form>
   </section>
 
