@@ -1,8 +1,5 @@
 <?php
 $conn = mysqli_connect('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db', '3306') or die('Error connecting to MySQL server.');
-// Check if connected if  not die
-$result = mysqli_query($conn, $query)
-or die(mysqli_error($conn));
 ?>
 
 <html>
