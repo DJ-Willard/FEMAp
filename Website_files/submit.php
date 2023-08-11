@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $infantKits = $user['infants'];
 
         // Append to gear list string
-        $gearList = ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
+        $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
 
         // Retrieve gear items from universal_gear category
         $stmt = $conn->query("SELECT gear_item FROM universal_gear");
@@ -249,7 +249,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $gear = array_unique($gear); 
 
         // Join items into comma separated string
-        $gearList .= implode(', ', $gear);
+        $gearList = implode(', ', $gear);
 
         //creating passing varible user_name
         $user_name = $user['name'];
