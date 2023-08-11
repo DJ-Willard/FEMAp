@@ -242,8 +242,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $gearList = implode(', ', $gear);
 
         // Calculate additional gear based on user responses
-        $water = $user['adults'] + $user['children'] + $user['infants'] * 3; 
-        $adultFood = $user['adults'] * 3000;
+        $water = ($user['adults'] + $user['children'] + $user['infants']) * 3; 
+        $adultFood = ($user['adults'] + $user['children']) * 3000;
         $infantFood = $user['infants'] * 1500;
         $adultKits = $user['adults'];
         $childKits = $user['children'];
