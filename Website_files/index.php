@@ -77,7 +77,7 @@ error_reporting(E_ALL);
   <!-- Make a questions with a text box that takes in how many family members (adults, children, infants) there are (check github for queries) -->
   <!-- Add the city based questions as well -->
 
-  <form method="post" action="submit.php">
+  <form method="post" action="testsubmit.php">
 
   <article>
 
