@@ -247,9 +247,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Append to gear list string
         $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
-    }
         //creating passing varible user_name
         $user_name = $user['name'];
+    }
 }
 ?>
 
