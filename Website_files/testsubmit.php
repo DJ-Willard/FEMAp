@@ -258,5 +258,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <hr>
 <p>Result of query:</p>
 <p>User: <?php echo $user_name; ?></p>
-<p>Gear List: <?php echo $gearlist; ?></p>
+<p>Gear List: <?php echo $gearList; ?></p>
 </html>
