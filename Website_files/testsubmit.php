@@ -58,18 +58,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $conn->prepare($query);
 
     // Bind parameters to the prepared statement
-    $stmt->bind_param("siiis
-                    sssss
-                    sssss
-                    sssss
-                    sssss
-                    sssss",
-                    $_POST['name'],
-                    $_POST['adults'],
-                $_POST['children'],
-                $_POST['infants'],
+    $stmt->bind_param("ssiiissssssssssssssssssssssssss",
+                $_POST['name'],
                 $_POST['hurricanes_tropical_storms'],
                 $_POST['tornadoes'],
+                $_POST['adults'],
+                $_POST['children'],
+                $_POST['infants'],
                 $_POST['earthquakes'],
                 $_POST['wildfires'],
                 $_POST['floods'],
@@ -95,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_POST['gas_leaks_explosions'],
                 $_POST['sewage_system_failures']
                 );
+                
     // Execute the prepared statement
     if ($stmt->execute()) {
         // Query to get user's responses
