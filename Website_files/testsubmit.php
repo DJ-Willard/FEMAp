@@ -106,132 +106,132 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Retrieve gear items from universal_gear category
         $stmt = $conn->query("SELECT gear_item FROM universal_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC));
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item'));
 
         // Check responses and get corresponding gear
         if ($user['hurricanes_tropical_storms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM hurricanes_tropical_storms_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['tornadoes'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM tornadoes_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['earthquakes'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM earthquakes_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['wildfires'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM wildfires_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['floods'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM floods_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['landslides'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM landslides_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['tsunamis'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM tsunamis_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['volcanic_eruptions'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM volcanic_eruptions_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['droughts'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM droughts_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['heatwaves'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM heatwaves_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['blizzards'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM blizzards_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['avalanches'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM avalanches_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['thunderstorms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM thunderstorms_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['hailstorms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM hailstorms_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['high_winds'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM high_winds_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['microbursts'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM microbursts_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['dust_storms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM dust_storms_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['fog_visibility'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM fog_visibility_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['industrial_accidents'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM industrial_accidents_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['chemical_spills'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM chemical_spills_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['nuclear_accidents'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM nuclear_accidents_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['power_outages'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM power_outages_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['water_supply_disruptions'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM water_supply_disruptions_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['gas_leaks_explosions'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM gas_leaks_explosions_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
         if ($user['sewage_system_failures'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM sewage_system_failures_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
 
