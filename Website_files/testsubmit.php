@@ -92,8 +92,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Execute the prepared statement
     if ($stmt->execute()) {
         // Query to get user's responses
+        // Retrieve the inserted user ID
+        $userId = $stmt->insert_id; 
         $stmt = $conn->prepare("SELECT * FROM user_responses WHERE id=?");
-        $stmt->bind_param('i', $userId); // from INSERT id
+        // from INSERT id
+        $stmt->bind_param('i', $userId);
         $stmt->execute(); 
         $result = $stmt->get_result();
         $user = $result->fetch_assoc();
