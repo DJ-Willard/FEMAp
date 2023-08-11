@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -101,10 +101,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Array to store gear
         $gear = []; 
 
-        // Check responses and get corresponding gear
+        // Retrieve gear items from universal_gear category
         $stmt = $conn->query("SELECT gear_item FROM universal_gear");
-        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC));
 
+        // Check responses and get corresponding gear
         if ($user['hurricanes_tropical_storms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM hurricanes_tropical_storms_gear");
         $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
