@@ -53,12 +53,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                                  ?, ?, ?, ?, ?, 
                                                  ?, ?, ?, ?, ?, 
                                                  ?, ?, ?, ?, ?, 
-                                                 ?, ?, ?, ?, ?)";
+                                                 ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($query);
 
     // Bind parameters to the prepared statement
-    $stmt->bind_param("ssiiissssssssssssssssssssssssss",
+    $stmt->bind_param("siiisssssssssssssssssssssssss",
                 $_POST['name'],
                 $_POST['hurricanes_tropical_storms'],
                 $_POST['tornadoes'],
@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_POST['gas_leaks_explosions'],
                 $_POST['sewage_system_failures']
                 );
-                
+
     // Execute the prepared statement
     if ($stmt->execute()) {
         // Query to get user's responses
@@ -104,6 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $gear = []; 
 
         // Check responses and get corresponding gear
+        $stmt = $conn->query("SELECT gear_item FROM universal_gear");
+        $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
+
         if ($user['hurricanes_tropical_storms'] == 'yes') {
         $stmt = $conn->query("SELECT gear_item FROM hurricanes_tropical_storms_gear");
         $gear = array_merge($gear, $stmt->fetch_all(MYSQLI_ASSOC)); 
