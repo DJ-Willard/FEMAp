@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('34.170.255.121', 'web_user', 'OHg0dh31p!', 'natural_disaster_db', '3306') or die('Error connecting to MySQL server.');
+$conn = mysqli_connect('34.170.255.121', 'web_user', 'OHg0dh3lp!', 'natural_disaster_db', '3306') or die('Error connecting to MySQL server.');
 ?>
 
 <html>
@@ -12,6 +12,7 @@ $state = $_POST['state'];
 
 $state = mysqli_real_escape_string($conn, $state);
 
+$query = "SELECT * ";
 $query = $query."FROM universal_gear";
 ?>
 
