@@ -104,6 +104,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Array to store gear
         $gear = []; 
 
+        // Calculate additional gear based on user responses
+        $water = ($user['adults'] + $user['children'] + $user['infants']) * 3; 
+        $adultFood = ($user['adults'] + $user['children']) * 3000;
+        $infantFood = $user['infants'] * 1500;
+        $adultKits = $user['adults'];
+        $childKits = $user['children'];
+        $infantKits = $user['infants'];
+
+        // Append to gear list string
+        $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
+
         // Retrieve gear items from universal_gear category
         $stmt = $conn->query("SELECT gear_item FROM universal_gear");
         $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item'));
@@ -241,16 +252,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Join items into comma separated string
         $gearList = implode(', ', $gear);
 
-        // Calculate additional gear based on user responses
-        $water = ($user['adults'] + $user['children'] + $user['infants']) * 3; 
-        $adultFood = ($user['adults'] + $user['children']) * 3000;
-        $infantFood = $user['infants'] * 1500;
-        $adultKits = $user['adults'];
-        $childKits = $user['children'];
-        $infantKits = $user['infants'];
-
-        // Append to gear list string
-        $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
         //creating passing varible user_name
         $user_name = $user['name'];
     }
