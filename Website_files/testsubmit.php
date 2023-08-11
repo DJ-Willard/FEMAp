@@ -52,6 +52,13 @@ mysqli_query($conn, $query);
 // based on checked hazards
 $gear_list = ""; 
 
+//test query then start data calculation
+$result = mysqli_query($conn, $query)
+or die(mysqli_error($conn));
+
+//universal gear fetch
+$universal_query = "SELECT * FROM universal_gear";
+$universal_result = mysqli_query($conn, $universal_query);
 while($universal_row = mysqli_fetch_assoc($universal_result)) {
     $gear_list .= $universal_row['gear_item'] . ", "; 
   }
@@ -75,8 +82,10 @@ Result of query:
 <p>
 
 <?php
+
 // Print output 
 echo $gear_list;
+echo "<br>";
 echo $name;
 
 mysqli_free_result($result);
