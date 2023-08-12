@@ -1,6 +1,6 @@
 <?php
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -245,23 +245,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $gear = array_merge($gear, array_column($stmt->fetch_all(MYSQLI_ASSOC), 'gear_item')); 
         }
 
+
         // Remove duplicates
         $gear = array_unique($gear); 
 
         // Join items into comma separated string
         $gearList = implode(', ', $gear);
-
-        // Calculate additional gear based on user responses
-        $water = ($user['adults'] + $user['children'] + $user['infants']) * 3; 
-        $adultFood = ($user['adults'] + $user['children']) * 3000;
-        $infantFood = $user['infants'] * 1500;
-        $adultKits = $user['adults'];
-        $childKits = $user['children'];
-        $infantKits = $user['infants'];
-
-        // Append to gear list string
-        $gearList .= ", $water gallons of water, $adultFood calories of adult food, $infantFood calories of infant food, $adultKits adult first aid kits, $childKits child first aid kits, $infantKits infant first aid kits";
-
 
         //creating passing varible user_name
         $user_name = $user['name'];
