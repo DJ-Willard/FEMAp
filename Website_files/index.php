@@ -24,6 +24,7 @@ error_reporting(E_ALL);
       <ul>
         <a href="About_page/index.php">About</a>
         <a <span style="padding-left: 55px;" href="https://www.fema.gov/about/contact">Contact </span></a>
+        <a <span style="padding-left: 75px;" href="https://www.mayoclinic.org/first-aid/first-aid-kits/basics/art-20056673">First Aid Kit Supplies</span></a>
       </ul>
     </nav>
   </header>
