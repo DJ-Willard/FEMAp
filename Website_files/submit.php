@@ -272,7 +272,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <!-- Display the gear list and user name -->
 <hr>
+<!--
 <p>Result of query:</p>
 <p>User: <?php echo $user_name; ?></p>
 <p>Gear List: <?php echo $gearList; ?></p>
+-->
+<?php
+$file = 'Generative_PDF_page/test.txt';
+file_put_contents('/Generative_PDF_page/test.txt', $gearList);
+header('Location:/Generative_PDF_page/index.php')
+?>
 </html>
