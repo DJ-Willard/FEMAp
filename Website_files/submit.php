@@ -279,7 +279,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 -->
 <?php
 $file = 'Generative_PDF_page/test.txt';
-file_put_contents('/Generative_PDF_page/test.txt', $gearList);
+file_put_contents($file, $gearList);
 header('Location:/Generative_PDF_page/index.php')
 ?>
 </html>
