@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -42,7 +41,9 @@
                     <div class="title_wrap"> <!--bill_total_wrap-->
                         <div class="name_sec"> <!--bill_sec-->
                             <p class="bold name">FEMA Checklist</p>
-                            <script src="username.js"></script>
+                            <div class="for">For:</div>
+                            <span id="username"></span></p><script>var user = "Username";
+                                document.getElementById("username").innerHTML=user.toLocaleString();</script>
                         </div>
                         <div class="date"> <!--total_wrap-->
                             <div class="bold date">Date</div>
@@ -56,32 +57,27 @@
                     <div class="main_table">
                         <div class="table_header">
                             <div class="row">
-                                <div class="bold col col_no">NO.</div>
-                                <div class="bold col col_des">ITEM DESCRIPTION</div>
-                            </div>
+                            <div class="col col_no">NO.</div>
+                            <div class="col col_des">ITEM DESCRIPTION</div>
+                            <div class="col col_check">CHECK</div>
                         </div>
-                        <div class="table_body">
-                            <!--test row-->
-
-                            <div class="row">
-                                <div class="col col_no"><p>00</p></div>
-                                <div class="col col_des">
-                                    <p class="bold">
-                                        <script>
-                                            function generaterow() {
-                                                var gearlist = "Electrolyte Replacement powder, Water spray bottles, Portable Fans, Sun Hat, Sun Glasses, Lightweight Clothing, Cooling Towels"
-
-                                                var gear = gearlist.split(', ');
-                                                for (var i=0; i < gear.length; i++){
-                                                    x = gear[i]
-                                                    echo(x)
-                                                }
-                                                window.onload = generaterow();
-                                            }
-                                        </script></p>   
-                                </div>
-                                <div class="col col_check">
-                                    <input type="checkbox">
+                    </div>
+                    <div class="table_body">
+                        <!-- PHP code to parse gear list and create rows -->
+                        <?php
+                        $gearList = file_get_contents("test.txt"); // Placeholder for gear list, it will be assigned from submit.php
+                        if (isset($_POST['gear_list'])) {
+                            $gearList = $_POST['gear_list'];
+                        }
+                        $gearItems = explode(', ', $gearList);
+                        foreach ($gearItems as $index => $gearItem) {
+                            echo '<div class="row">';
+                            echo '<div class="col col_no">' . ($index + 1) . '</div>';
+                            echo '<div class="col col_des">' . $gearItem . '</div>';
+                            echo '<div class="col col_check"><input type="checkbox"></div>';
+                            echo '</div>';
+                        }
+                        ?>
                                 </div>
                             </div>
                         </div>
@@ -103,19 +99,4 @@
         </div>
         </main>
     </body>
-    <script>
-
-
-    function generaterow() {
-        var gearlist = "Electrolyte Replacement powder, Water spray bottles, Portable Fans, Sun Hat, Sun Glasses, Lightweight Clothing, Cooling Towels"
-
-        var gear = gearlist.split(', ');
-        for (var i=0; i < gear.length; i++){
-            x = gear[i]
-            echo(x)
-        }
-    }
-    
-        
-    </script>
 </html>
