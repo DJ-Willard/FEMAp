@@ -1,14 +1,11 @@
-const main = document.querySelector('main');
 const fs = require('fs');
 
-var gearlist = fs.readFile('test.txt', 'utf8', (err, data) => {
+fs.readFile('username.txt', 'utf8', (err, data) => {
     if(err){
         console.error(err);
         return;
     }
-    console.log(data);
-    let htmlString = "<div>username</div>";
-    htmlString = '<div>${data}</div>';
+    console.log(data)
+    
 });
 
-main.innerHTML = htmlString;

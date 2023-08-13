@@ -63,13 +63,18 @@ body{
     font-size:  20px;
     color: var(--primary);
 }
+.checklist_wrapper .header .title_wrap .for{
+    font-size: 14px;
+    color: var(--primary);
+}
 
 .checklist_wrapper .body .main_table .table_header{
-    background: var(--primary);
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
 }
 
 .checklist_wrapper .body .main_table .table_header .row{
-    color: var(--white);
+    color: var(--primary);
     font-size: 18px;
     border-bottom: 0px;
 }
@@ -86,3 +91,10 @@ body{
 .checklist_wrapper .body .main_table .row .col.col_no{width: 8%;}
 .checklist_wrapper .body .main_table .row .col.col_des{width: 42%;}
 .checklist_wrapper .body .main_table .row .col.col_check{width: 55%; text-align: right;}
+
+.checklist_wrapper .button_wrap{
+    color: var(--primary);
+    font-size: 12px;
+    border-bottom: 0px;
+    padding: 10px;
+}
